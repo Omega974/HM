@@ -26,6 +26,7 @@ params [
 
 if !(player getVariable ["interpreter", false]) exitWith {
     [name _man, localize "STR_BTC_HAM_CON_INFO_ASKREP_NOINTER"] call btc_fnc_showSubtitle;
+    playSound3d [getMissionPath "core\sounds\gopnik.ogg", _man, false, getPosASL (_man), 5, 1, 10];
 };
 
 btc_int_ask_data = nil;
